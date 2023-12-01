@@ -11,7 +11,38 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${inter.className} bg-gradient-to-bl from-gray-100 to-gray-50 bg-no-repeat dark:from-blue-dark-950 dark:to-blue-dark-900`}
+      >
+        {/* <div className='min-w-full w-full min-h-screen h-screen overflow-hidden fixed top-0 left-0 -z-[9999]'>
+          <div
+            className='w-40 h-40 sm:w-60 sm:h-60 lg:w-80 lg:h-80 absolute bottom-10 left-12 sm:left-16 lg:left-20 bg-purple-400 -z-20 rounded-full blur-[7rem]'
+          >
+          </div>
+          <div
+            className='w-4 sm:w-6 h-[50rem] bg-purple-400 absolute -top-32 left-[70%] rotate-[-25deg] sm:rotate-[-40deg] lg:rotate-[-45deg] rounded-full overflow-hidden blur-[2rem]'
+          >
+          </div>
+          <div
+            className='w-4 sm:w-6 h-[50rem] bg-red-400 absolute -top-32 left-3/4 rotate-[-25deg] sm:rotate-[-40deg] lg:rotate-[-45deg] rounded-full overflow-hidden blur-[2rem]'
+          >
+          </div>
+          <div
+            className='w-4 sm:w-6 h-[30rem] bg-purple-400 absolute -top-32 left-[80%] rotate-[-25deg] sm:rotate-[-40deg] lg:rotate-[-45deg] rounded-full overflow-hidden blur-[2rem]'
+          >
+          </div>
+        </div> */}
+        {/*
+        <div 
+          className='w-40 h-40 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full blur-3xl -z-10'
+        >
+        </div>
+        <div 
+          className='w-80 h-60 absolute top-10 right-40 bg-purple-500 borderRadius2 blur-[10rem]'
+        >
+        </div> */}
+        {children}
+      </body>
     </html>
   )
 }

@@ -1,113 +1,48 @@
-import Image from 'next/image'
+"use client"
 
-export default function Home() {
+import Hero from '@/components/Hero';
+import React, { useEffect, useState } from 'react'
+
+const Home = () => {
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    if (theme === "light") {
+      setTheme("dark");
+      window.localStorage.setItem("theme", "dark");
+      document.documentElement.classList.add("dark");
+    } else {
+      setTheme("light");
+      window.localStorage.setItem("theme", "light");
+      document.documentElement.classList.remove("dark");
+    }
+  };
+  useEffect(() => {
+    const localTheme = window.localStorage.getItem("theme");
+    if (localTheme) {
+      setTheme(localTheme);
+      if (localTheme === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    } else if (window.matchMedia("(prefer-color-sheme: dark)").matches) {
+      setTheme("dark");
+      document.documentElement.classList.add("dark")
+    }
+  }, []);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className='pt-36'>
+      <Hero />
+      {/* <div className="container border4 border-blue-500 grid grid-cols-2">
+        <div className="border-4 border-red-500">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae recusandae consectetur placeat distinctio dolorum! Labore ex repellat et voluptas ratione optio, deserunt itaque maiores tempora culpa vero odio. Quas, ex? Nostrum repudiandae minus aliquam placeat autem illum, dolores tempora, quos optio earum nulla odio sunt nobis perspiciatis distinctio quaerat cum, animi aliquid architecto laudantium nesciunt maxime molestiae. Veritatis quaerat architecto autem amet magni ipsam eius tenetur commodi veniam exercitationem praesentium velit fuga tempore illo, debitis aliquid magnam, accusamus ratione odio vel officia quos perspiciatis aut. Quam recusandae error sapiente vero asperiores illo itaque ipsum commodi quo exercitationem accusantium, eos, laudantium velit doloribus nostrum? Nobis dolore adipisci mollitia quas perspiciatis provident recusandae sed nesciunt magni exercitationem officia error cumque aliquid quam illo sint, explicabo deserunt sapiente beatae aut accusamus similique quisquam a molestiae! Minima rerum quam accusantium culpa velit, iure veniam adipisci rem aspernatur unde excepturi sit nisi, sunt alias doloribus voluptatem consequatur commodi porro omnis corrupti. Atque dicta alias eveniet reprehenderit perferendis facilis quos! Nulla quaerat libero asperiores enim, fugiat provident ut repellat accusamus, deleniti porro sint vel beatae! Mollitia dolores obcaecati nobis a velit minima, incidunt in earum impedit magni expedita vero, perspiciatis itaque. Ullam eum ipsam explicabo veritatis et repellendus ad atque necessitatibus? Officia quo odio sunt dolorum, similique nihil consectetur error iste culpa delectus nam, libero ipsam accusantium deleniti repellendus, quasi sapiente debitis vitae mollitia quia quos. A delectus, veniam eaque porro vel debitis laboriosam deleniti ad veritatis accusamus hic itaque quia commodi officiis aliquam similique aliquid maxime quas odit doloremque. Aut sed ducimus dolorem cupiditate quas dolorum nihil maxime veniam sapiente culpa fuga vel voluptatum non officia dolores, tempora illum itaque quae beatae veritatis sequi autem praesentium nesciunt quos. Corrupti beatae voluptas nesciunt doloribus a eaque explicabo unde dolorum esse, inventore necessitatibus alias ex nulla aperiam, ipsa ullam placeat perferendis fugiat possimus. Corrupti nemo perspiciatis quaerat laboriosam quas. Aliquid aliquam sunt nesciunt quae blanditiis numquam perferendis nemo non. Qui, deserunt culpa. Deleniti itaque neque quod quia reiciendis minus explicabo iste iusto esse quibusdam ad, dolores recusandae aspernatur repellat consectetur fugiat odio fuga, distinctio accusamus nam, libero aliquam corporis numquam! Voluptates aliquam magnam veniam, illum, quam ipsa sunt delectus aspernatur quia ut non quod mollitia totam distinctio earum cumque debitis architecto necessitatibus facilis, asperiores velit! Amet, omnis? Modi deserunt deleniti nesciunt beatae veniam eveniet ullam distinctio, id commodi dolorum aperiam quod nobis suscipit cupiditate quibusdam excepturi sint numquam tempore! Sit nam corrupti natus modi aliquam quod quae in repellat praesentium doloribus aut magni quia exercitationem voluptatibus, iure dignissimos explicabo laboriosam quis nostrum pariatur, minima id. Labore, doloribus accusantium aliquid qui facilis voluptate modi explicabo cupiditate quo deleniti tempora rerum animi. Ipsam cupiditate praesentium fugit culpa architecto quae eum neque sed. Alias ea aliquid quasi omnis maxime autem, quaerat nostrum, tempore consectetur et ex quas nesciunt numquam obcaecati delectus saepe placeat. Velit, a. Excepturi voluptate perspiciatis labore! Nemo voluptates aut nesciunt repellendus obcaecati aperiam maxime accusantium possimus iusto magnam? Dignissimos vitae deleniti id ipsum, ad doloribus? Harum, at.
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        <div className="border-4 border-red-500">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit nam maxime nisi accusamus, ex, unde quis ut, natus cumque ea laudantium nemo eaque quo aperiam perferendis molestias modi! Qui officia culpa iusto aut delectus earum facilis. Quidem saepe temporibus cupiditate. Architecto maxime esse accusantium amet consequatur veniam animi temporibus voluptas fugiat assumenda eveniet exercitationem officia dolore quasi dolor, enim est odio vitae at dolorum harum, ea sequi necessitatibus accusamus. Ullam facilis laborum veritatis dignissimos quam nemo iste cumque quos eveniet incidunt repellendus repudiandae adipisci, in sequi mollitia dicta ipsa ut architecto, eius esse voluptatibus reiciendis perferendis enim? Molestias in, id vitae hic illo eaque nihil enim et inventore! Cumque repellat placeat sit fugiat, quaerat laborum odit repellendus incidunt molestiae magnam vitae pariatur excepturi, nam ipsa blanditiis! Dolorem eos in consequuntur nesciunt, nihil minima possimus repudiandae voluptas culpa harum corporis nulla doloremque, fugiat sed adipisci animi deserunt at vel commodi qui, autem laudantium. Nostrum consectetur odio magnam alias id error aperiam ducimus culpa itaque! Eligendi dignissimos deserunt libero fugit culpa iste delectus placeat ipsa harum molestias, illo quisquam sequi blanditiis quo corporis alias temporibus facilis cupiditate exercitationem, saepe amet. Eum perspiciatis incidunt dolorum amet! Optio autem omnis veniam odit earum asperiores.
+        </div>
+      </div> */}
     </main>
   )
 }
+
+export default Home

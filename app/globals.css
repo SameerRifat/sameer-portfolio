@@ -3,6 +3,121 @@
 @tailwind utilities;
 
 :root {
+  --cornSilk-50: #fff;
+  --cornSilk-100: #fffdf8;
+  --cornSilk-200: #fffbf2;
+  --cornSilk-300: #fffaec;
+  --cornSilk-400: #fff8e6;
+  --cornSilk-500: #fff7e0;
+  --cornSilk-600: #fff3cf;
+  --cornSilk-700: #ffeebe;
+  --cornSilk-800: #ffeaad;
+  --cornSilk-900: #ffe59c;
+  --cornSilk-950: #ffe18b;
+
+  --cornSilk-dark-50: #7a5b00;
+  --cornSilk-dark-100: #584100;
+  --cornSilk-dark-200: #473500;
+  --cornSilk-dark-300: #362800;
+  --cornSilk-dark-400: #251b00;
+  --cornSilk-dark-500: #140f00;
+  --cornSilk-dark-600: #100c00;
+  --cornSilk-dark-700: #0c0900;
+  --cornSilk-dark-800: #080600;
+  --cornSilk-dark-900: #040300;
+  --cornSilk-dark-950: #000;
+
+  --blue-dark-500: #172554;
+  --blue-dark-600: #162046;
+  --blue-dark-700: #151b39;
+  --blue-dark-800: #13162c;
+  --blue-dark-900: #101020;
+  --blue-dark-950: #090914;
+
+}
+
+.container{
+  width: 90%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.clip{
+  clip-path: inset( -100vw 0 0 -100vw );
+  /* border-radius: 48px 48px 60px 48px; */
+  /* border: 4px solid yellow; */
+}
+
+.hero_img_border_radius{
+  border-radius: 50% 50% 0% 50% / 50% 50% 0% 0%;
+}
+.borderRadius2{
+  border-radius: 30% 70% 75% 25% / 30% 42% 58% 70%  ;
+}
+
+
+
+
+
+
+
+/* html.dark { */
+  /* --cornSilk-dark-50: #7a5b00;
+  --cornSilk-dark-100: #584100;
+  --cornSilk-dark-200: #473500;
+  --cornSilk-dark-300: #362800;
+  --cornSilk-dark-400: #251b00;
+  --cornSilk-dark-500: #140f00;
+  --cornSilk-dark-600: #100c00;
+  --cornSilk-dark-700: #0c0900;
+  --cornSilk-dark-800: #080600;
+  --cornSilk-dark-900: #040300;
+  --cornSilk-dark-950: #000; */
+
+  /* --cornSilk-dark-100: #786e3c;
+  --cornSilk-dark-200: #6c6336;
+  --cornSilk-dark-300: #605830;
+  --cornSilk-dark-400: #544d2a;
+  --cornSilk-dark-500: #484224;
+  --cornSilk-dark-600: #3c371e;
+  --cornSilk-dark-700: #302c18;
+  --cornSilk-dark-800: #242112;
+  --cornSilk-dark-900: #18160c;
+  --cornSilk-dark-950: #0c0b06; */
+
+  /* --background-start-hex: #1e1e1e;
+  --background-end-hex: #252526; */
+/* } */
+
+/* body {
+  background-image: linear-gradient(
+    225deg,
+    var(--background-start-hex),
+    var(--background-end-hex)
+  );
+  background-repeat: no-repeat;
+  min-height: 100vh;
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --cornSilk-100: #33312d;
+    --cornSilk-200: #66635a;
+    --cornSilk-300: #999486;
+    --cornSilk-400: #ccc6b3;
+    --cornSilk-500: #fff7e0;
+    --cornSilk-600: #fff9e6;
+    --cornSilk-700: #fffaec;
+    --cornSilk-800: #fffcf3;
+    --cornSilk-900: #fffdf9;
+  }
+} */
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +139,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
