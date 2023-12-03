@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Header from '@/components/Header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -10,10 +11,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className='!scroll-smooth'>
       <body
-        className={`${inter.className} bg-gradient-to-bl from-gray-100 to-gray-50 bg-no-repeat dark:from-blue-dark-950 dark:to-blue-dark-900`}
+        // className={`${inter.className} bg-gradient-to-bl from-gray-100 to-gray-50 bg-no-repeat dark:from-blue-dark-950 dark:to-blue-dark-900 relative`}
+        className={`${inter.className} bg-gray-50 text-gray-950 relative
+        dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
+        
+
         {/* <div className='min-w-full w-full min-h-screen h-screen overflow-hidden fixed top-0 left-0 -z-[9999]'>
           <div
             className='w-40 h-40 sm:w-60 sm:h-60 lg:w-80 lg:h-80 absolute bottom-10 left-12 sm:left-16 lg:left-20 bg-purple-400 -z-20 rounded-full blur-[7rem]'
@@ -41,6 +46,7 @@ export default function RootLayout({ children }) {
           className='w-80 h-60 absolute top-10 right-40 bg-purple-500 borderRadius2 blur-[10rem]'
         >
         </div> */}
+        <Header />
         {children}
       </body>
     </html>
