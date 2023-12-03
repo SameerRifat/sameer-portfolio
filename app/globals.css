@@ -36,6 +36,12 @@
 
 }
 
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .container{
   width: 90%;
   max-width: 1600px;
@@ -55,7 +61,15 @@
   border-radius: 30% 70% 75% 25% / 30% 42% 58% 70%  ;
 }
 
-
+.icon{
+  @apply bg-white w-[22px] h-[22px] xxs:w-[30px] xxs:h-[30px] xs:w-[38px] xs:h-[38px] sm:w-10 sm:h-10 rounded-md xs:rounded-lg sm:rounded-lg absolute -rotate-45 bg-opacity-60 backdrop-blur-[1rem] p-2 flex justify-center items-center
+}
+.icon2{
+  @apply bg-white rounded-md xs:rounded-lg sm:rounded-lg absolute -rotate-45 bg-opacity-60 backdrop-blur-[1rem] p-2 justify-center items-center gap-1
+}
+.icon_image{
+  @apply w-[14px] xxs:w-[20px] xs:w-[25px] sm:w-[30px] max-w-[30px]
+}
 
 
 
