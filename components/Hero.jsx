@@ -10,7 +10,7 @@ import Link from 'next/link';
 
 const Hero = () => {
     return (
-        <section className='w-[90%] mx-auto grid grid-cols-1 gap-20 lg:gap-0 xl:grid-cols-2 min-h-[80vh]'>
+        <section className='w-[90%] mx-auto grid grid-cols-1 gap-10 lg:gap-0 xl:grid-cols-2 min-h-[80vh]'>
             <div className='flex items-center justify-center text-center lg:text-start order-2 xl:order-1'>
                 <div className=''>
                     <span className='flex items-center justify-center lg:justify-start gap-2 text-base lg:text-lg'>
