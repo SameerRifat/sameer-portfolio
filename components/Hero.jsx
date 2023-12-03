@@ -10,7 +10,7 @@ import Link from 'next/link';
 
 const Hero = () => {
     return (
-        <section className='w-[90%] mx-auto grid grid-cols-1 lg:gap-0 xl:grid-cols-2 min-h-[80vh]'>
+        <section className='w-[90%] mx-auto grid grid-cols-1 gap-20 lg:gap-0 xl:grid-cols-2 min-h-[80vh]'>
             <div className='flex items-center justify-center text-center lg:text-start order-2 xl:order-1'>
                 <div className=''>
                     <span className='flex items-center justify-center lg:justify-start gap-2 text-base lg:text-lg'>
@@ -79,7 +79,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex justify-center items-center relative order-1 xl:order-2 pl-6 pb-5'>
+            <div className='flex justify-center items-center relative order-1 xl:order-2 = pl-6 pb-5'>
                 <div className='relative w-[80px] xxs:w-[130px] xs:w-[160px] sm:w-[200px] md:w-[240px] h-[80px] xxs:h-[130px] xs:h-[160px] sm:h-[200px] md:h-[240px] bg-gradient-to-br from-yellow-500 via-yellow-300 to-yellow-500 rotate-45 rounded-[1rem] xs:rounded-[1.7rem] sm:rounded-[2.3rem] md:rounded-[3rem] -z-50 clip'>
                     <Image
                         src='/assets/profile.png'
@@ -176,7 +176,7 @@ const Hero = () => {
                         <span className='text-[9px] text-blue-600 font-semibold tracking-wide items-center'>TypeScript</span>
                     </div>
                 </div>
-                <div className='w-[85px] h-[85px] xxs:w-[145px] xxs:h-[145px] xs:w-[175px] xs:h-[175px] sm:w-[220px] sm:h-[220px] md:w-[260px] md:h-[260px] border-r-2 border-b-[3px] border-dashed border-yellow-300 absolute rotate-45 left-1/2 top-1/2 -translate-x-[42%] xs:-translate-x-[45%] -translate-y-[50%] rounded-[1rem] xs:rounded-[1.7rem] sm:rounded-[2.3rem] md:rounded-[3rem] -z-50'>
+                <div className='w-[85px] h-[85px] xxs:w-[135px] xxs:h-[135px] xs:w-[175px] xs:h-[175px] sm:w-[210px] sm:h-[210px] md:w-[260px] md:h-[260px] border-r-2 border-b-[3px] border-dashed border-yellow-300 absolute rotate-45 left-1/2 top-1/2 -translate-x-[42%] xs:-translate-x-[45%] -translate-y-[50%] rounded-[1rem] xs:rounded-[1.7rem] sm:rounded-[2.3rem] md:rounded-[3rem] -z-50'>
 
                 </div>
                 {/* <div className='relative w-60 h-[260px]'>
