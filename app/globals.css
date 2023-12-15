@@ -68,6 +68,119 @@
   @apply w-[14px] xxs:w-[20px] xs:w-[25px] sm:w-[30px] max-w-[30px]
 }
 
+.corner-border {
+  position: absolute;
+  content: '';
+  width: 20px; 
+  height: 20px; 
+  /* border: 4px solid #a855f7;  */
+}
+
+.top-left {
+  top: -6px; 
+  left: -6px; 
+  border-right: none;
+  border-bottom: none;
+}
+
+.bottom-right {
+  bottom: -6px; 
+  right: -6px; 
+  border-top: none;
+  border-left: none;
+}
+
+/* Experience */
+.exp-icon{
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background: rgb(168, 85, 247);
+  position: relative;
+}
+.exp-icon::after{
+  position: absolute;
+  content: '';
+  width: 3px;
+  height: 55px;
+  background: rgb(168, 85, 247);
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  /* transform: translateY(-50%); */
+}
+
+@media (min-width: 360px) {
+  .corner-border {
+    position: absolute;
+    content: '';
+    width: 30px; 
+    height: 30px; 
+    /* border: 4px solid #a855f7;  */
+  }
+  .top-left {
+    top: -10px; 
+    left: -10px;
+  }
+  
+  .bottom-right {
+    bottom: -10px; 
+    right: -10px; 
+  }
+}
+
+
+/* Skills */
+.html{
+  animation: html 3s;
+  animation-timing-function: ease-in-out;
+}
+.css{
+  animation: css 3s;
+  animation-timing-function: ease-in-out;
+}
+.js{
+  animation: js 3s;
+  animation-timing-function: ease-in-out;
+}
+.react{
+  animation: react 3s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes html {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 75%;
+  }
+}
+@keyframes css {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 90%;
+  }
+}
+@keyframes js {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 50%;
+  }
+}
+@keyframes react {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 85%;
+  }
+}
+
 
 
 

@@ -1,16 +1,21 @@
 import Image from 'next/image'
 import React from 'react'
 
-import { PiHandWavingFill } from "react-icons/pi";
-import { FaArrowRight } from "react-icons/fa";
-import { MdOutlineFileDownload } from "react-icons/md";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+// import { PiHandWavingFill } from "react-icons/pi";
+// import { FaArrowRight } from "react-icons/fa";
+// import { MdOutlineFileDownload } from "react-icons/md";
+// import { FaLinkedin } from "react-icons/fa";
+// import { FaGithub } from "react-icons/fa";
 import Link from 'next/link';
+
+import ArrowRightAltOutlinedIcon from '@mui/icons-material/ArrowRightAltOutlined';
+import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Hero = () => {
     return (
-        <section className='w-[90%] mx-auto grid grid-cols-1 gap-10 lg:gap-0 xl:grid-cols-2 min-h-[80vh] pt-52'>
+        <section className='w-[90%] mx-auto grid grid-cols-1 gap-10 lg:gap-0 xl:grid-cols-2 min-h-[80vh] pt-52 mb-12'>
             <div className='flex items-center justify-center text-center lg:text-start order-2 xl:order-1'>
                 <div className=''>
                     <span className='flex items-center justify-center lg:justify-start gap-2 text-base lg:text-lg'>
@@ -37,7 +42,7 @@ const Hero = () => {
                     >
                         <Link
                             href="#contact"
-                            className="group bg-gray-900 text-white w-full xxs:w-52 py-3 rounded-md shadow-xl flex items-center justify-center gap-2 text-[14px] xs:text-base
+                            className="cursor-pointer group bg-gray-900 text-white w-full xxs:w-52 py-3 rounded-md shadow-xl flex items-center justify-center gap-2 text-[14px] xs:text-base
                                         outline-none hover:scale-110 focus:scale-110 hover:bg-gray-950 active:scale-105 transition-all"
                         // onClick={() => {
                         //     setActiveSection("Contact");
@@ -45,7 +50,7 @@ const Hero = () => {
                         // }}
                         >
                             Contact me here{" "}
-                            <FaArrowRight className="opacity-70 group-hover:translate-x-1 transition-all" />
+                            <ArrowRightAltOutlinedIcon className="opacity-70 group-hover:translate-x-1 transition-all" />
                         </Link>
 
                         <a
@@ -54,9 +59,10 @@ const Hero = () => {
                             className="group border border-white/80 shadow-xl w-full xxs:w-52 py-3 rounded-md flex items-center justify-center gap-2 text-[14px] xs:text-base
                                         outline-none hover:scale-110 focus:scale-110 active:scale-[1] transition-all cursor-pointer dark:bg-white/10
                                         "
+                            style={{cursor: 'pointer'}}
                         >
                             Download Resume{" "}
-                            <MdOutlineFileDownload className="text-xl opacity-90 group-hover:translate-y-1 transition-all" />
+                            <FileDownloadOutlinedIcon className="text-xl opacity-90 group-hover:translate-y-1 transition-all" />
                         </a>
 
                         <a
@@ -65,7 +71,7 @@ const Hero = () => {
                             href="https://linkedin.com"
                             target="_blank"
                         >
-                            <FaLinkedin className="text-xl" />
+                            <LinkedInIcon className="text-xl " fontSize='medium'/>
                         </a>
 
                         <a
@@ -74,7 +80,7 @@ const Hero = () => {
                             href="https://github.com"
                             target="_blank"
                         >
-                            <FaGithub className="text-xl" />
+                            <GitHubIcon className="text-xl " fontSize='medium'/>
                         </a>
                     </div>
                 </div>

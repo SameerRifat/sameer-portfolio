@@ -1,6 +1,11 @@
 "use client"
 
+import About from '@/components/About';
+import Experience from '@/components/Experience';
 import Hero from '@/components/Hero';
+import Projects from '@/components/Projects';
+import SectionDivider from '@/components/SectionDivider';
+import Skills from '@/components/Skills';
 import React, { useEffect, useState } from 'react'
 
 const Home = () => {
@@ -52,6 +57,11 @@ const Home = () => {
         </div>
       </div>
       <Hero />
+      {/* <SectionDivider /> */}
+      <About />
+      <Experience />
+      <Skills />
+      <Projects />
       <div className="container my-10">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, perferendis repellat? Iste, recusandae molestiae nemo omnis assumenda ducimus doloribus laudantium quam suscipit nesciunt hic corporis aliquam asperiores numquam neque, ab distinctio quas quod enim. Molestiae, error omnis accusamus harum similique unde mollitia perspiciatis necessitatibus voluptas asperiores dolores, voluptatum eum totam temporibus reiciendis ipsa incidunt animi sunt assumenda, ullam voluptates. Quia architecto distinctio nemo error id consequuntur praesentium autem, alias accusantium non officia enim earum esse neque illum? Ratione, error adipisci. In velit tenetur cumque obcaecati accusantium eos ipsa rerum explicabo beatae ullam voluptatum, nam at assumenda fugiat sequi molestiae ipsam et dignissimos id distinctio tempore! Perspiciatis quo sunt voluptatem voluptatibus enim beatae et corporis necessitatibus voluptas, provident, ipsum ipsa esse! Amet tempore explicabo doloremque tenetur ullam temporibus? Aperiam, cupiditate repellendus. Odio doloremque rerum quod ea aliquid totam accusantium vitae voluptatibus perspiciatis suscipit libero cum hic ipsa esse modi quidem labore repellat cumque, molestiae delectus in iure cupiditate aspernatur quas! Deserunt maiores quasi perferendis omnis tempora aperiam porro nesciunt veniam dicta corporis officia eveniet, consequatur cum minus fugiat? Accusamus deleniti veniam quae mollitia qui eveniet excepturi cum iure molestiae repudiandae magni optio totam recusandae, ipsum delectus architecto. Cumque tempora nam in, suscipit temporibus sapiente perferendis atque consequuntur iusto, molestias reprehenderit neque dicta amet adipisci quia debitis architecto repudiandae impedit optio. Fugit reiciendis voluptates quos, labore voluptatem nesciunt aspernatur quam beatae voluptatibus sed dolores autem suscipit odio, quibusdam earum officia architecto accusamus animi voluptatum dolor. Obcaecati, sunt? Qui atque ut cum, possimus deserunt earum? Dolorem quam ducimus officia repellat perferendis consectetur sit doloribus est totam? Dolor, facere autem, placeat praesentium rerum maiores inventore amet ducimus labore tempora et neque similique sint aut numquam, vitae debitis ipsa odit? Quasi deserunt voluptatum optio consequatur minus ducimus illo laborum tempore suscipit enim vitae, eaque cumque.
       </div>
