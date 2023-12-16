@@ -66,8 +66,8 @@ const ProjectDetail = ({ open, handleClickOpen, handleClose, scroll, proj }) => 
                         width="100%"
                         height="100%"
                         controls
-                        poster="/echoCartPoster.png"
-                        // poster={proj?.imageUrl.src}
+                        // poster="/echoCartPoster.png"
+                        poster={proj?.imageUrl.src}
                         // style={{ maxWidth: '100%', width: '100%', height: 'auto', display: 'block', margin: 'auto' }}
                     >
                         <source src="/echoCart.mp4" type="video/mp4" />
