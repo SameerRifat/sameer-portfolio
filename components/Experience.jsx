@@ -25,7 +25,7 @@ const Experience = () => {
                                     <span className="exp-icon"></span>
                                 </div>
                                 <div>
-                                    <h4 className='font-medium text-l leading-3'>Masters of Business Administration dfdfdfdfd</h4>
+                                    <h4 className='font-medium text-l leading-3'>Masters of Business Administration</h4>
                                     <p className='text-sm my-2'>Business</p>
                                     <p className='text-purple-500 text-xs flex items-center gap-1 leading-3'><CalendarMonthOutlinedIcon fontSize='small' /> 2011 - 2014</p>
                                 </div>
