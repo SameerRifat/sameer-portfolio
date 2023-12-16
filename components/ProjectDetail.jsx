@@ -63,13 +63,15 @@ const ProjectDetail = ({ open, handleClickOpen, handleClose, scroll, proj }) => 
                         height={360} // Set the height of the video
                     /> */}
                     <video
-                        width="auto"
+                        width="100%"
+                        height="100%"
                         controls
-                        // poster='projects/echoCart.png'
-                        poster={proj?.imageUrl.src}
-                        style={{ maxWidth: '100%', width: '100%', height: 'auto', display: 'block', margin: 'auto' }}
+                        poster="/echoCartPoster.png"
+                        // poster={proj?.imageUrl.src}
+                        // style={{ maxWidth: '100%', width: '100%', height: 'auto', display: 'block', margin: 'auto' }}
                     >
-                        <source src={proj?.videoUrl} type="video/mp4" />
+                        <source src="/echoCart.mp4" type="video/mp4" />
+                        {/* <source src={proj?.videoUrl} type="video/mp4" /> */}
                         Your browser does not support the video tag.
                     </video>
                 </DialogContent>
