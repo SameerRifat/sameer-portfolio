@@ -10,13 +10,13 @@ import ProjectDetail from './ProjectDetail'
 
 const Projects = () => {
     const [open, setOpen] = React.useState(false);
-    // const [scroll, setScroll] = React.useState('paper');
+    const [scroll, setScroll] = React.useState('paper');
     const [proj, setProj] = useState({ imageUrl: '', videoUrl: '' });
 
-    const handleClickOpen = (item) => () => {
+    const handleClickOpen = (scrollType, item) => () => {
         console.log('item: ', item)
         setOpen(true);
-        // setScroll(scrollType);
+        setScroll(scrollType);
         setProj({ imageUrl: item.imageUrl, videoUrl: item.videoUrl, url: item.url })
     };
     // console.log('Proj: ', proj)
@@ -36,7 +36,7 @@ const Projects = () => {
                             const { title, description, tags, imageUrl, videoUrl, bannerUrl } = item
                             return (
                                 <div
-                                    onClick={handleClickOpen(item)}
+                                    onClick={handleClickOpen("body", item)}
                                     className="group cursor-pointer bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] mb-3 sm:mb-8 last:mb-0 dark:even:pl-8 hover:bg-gray-200 transition dark:bg-white/10 dark:hover:bg-white/20"
                                 >
                                     <Image
@@ -78,7 +78,7 @@ const Projects = () => {
                     </div>
                 </div>
             </section>
-            <ProjectDetail open={open} handleClickOpen={handleClickOpen} handleClose={handleClose} proj={proj} />
+            <ProjectDetail open={open} handleClickOpen={handleClickOpen} handleClose={handleClose} scroll={scroll} proj={proj} />
         </>
     )
 }

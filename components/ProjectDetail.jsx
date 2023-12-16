@@ -9,7 +9,7 @@ import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 // import resPoster from '@/public/projects/resPoster.png'; 
 // import vid from '@/public/projects/echoCart3.mp4';
 
-const ProjectDetail = ({ open, handleClickOpen, handleClose, proj }) => {
+const ProjectDetail = ({ open, handleClickOpen, handleClose, scroll, proj }) => {
     // const [open, setOpen] = React.useState(false);
     // const [scroll, setScroll] = React.useState('paper');
 
@@ -37,7 +37,7 @@ const ProjectDetail = ({ open, handleClickOpen, handleClose, proj }) => {
             <Dialog
                 open={open}
                 onClose={handleClose}
-                scroll='body'
+                scroll={scroll}
                 // scroll={scroll}
                 aria-labelledby="scroll-dialog-title"
                 aria-describedby="scroll-dialog-description"
