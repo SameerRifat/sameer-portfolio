@@ -32,7 +32,7 @@ const Projects = () => {
     return (
         <>
             <section className='container'>
-                <SectionHeading title="Recent Works" subtitle="My Portfolio" />
+                <SectionHeading title="Recent Works Hello" subtitle="My Portfolio" />
                 <div className='flex justify-center'>
                     <div className='grid grid-cols-1 xl:grid-cols-2 gap-5'>
                         {projectsData.map((item, ind) => {
